@@ -1,3 +1,5 @@
+package todolist;
+
 import java.util.Scanner;
 
 public class ToDoListApp {
@@ -9,9 +11,9 @@ public class ToDoListApp {
         do {
             // Print menu options
             System.out.println("========== ToDo List App ==========");
-            System.out.println("1. Add Task");
-            System.out.println("2. Remove Task");
-            System.out.println("3. Mark Task as Complete");
+            System.out.println("1. Add todolist.Task");
+            System.out.println("2. Remove todolist.Task");
+            System.out.println("3. Mark todolist.Task as Complete");
             System.out.println("4. List Tasks");
             System.out.println("5. Exit");
             System.out.println("===================================");
@@ -24,19 +26,19 @@ public class ToDoListApp {
                     System.out.print("Enter task description: ");
                     String description = scanner.nextLine();
                     toDoList.addTask(description);
-                    System.out.println("Task added!");
+                    System.out.println("todolist.Task added!");
                     break;
                 case "2":
                     System.out.print("Enter task number to remove: ");
                     int removeIndex = Integer.parseInt(scanner.nextLine());
                     toDoList.removeTask(removeIndex - 1); // Adjust index for 0-based list
-                    System.out.println("Task removed!");
+                    System.out.println("todolist.Task removed!");
                     break;
                 case "3":
                     System.out.print("Enter task number to mark as complete: ");
                     int completeIndex = Integer.parseInt(scanner.nextLine());
                     toDoList.markTaskComplete(completeIndex - 1); // Adjust index for 0-based list
-                    System.out.println("Task marked as complete!");
+                    System.out.println("todolist.Task marked as complete!");
                     break;
                 case "4":
                     System.out.println("========== Tasks ==========");
